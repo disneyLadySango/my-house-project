@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import SuperSimpleRouterPage from './components/pages/SuperSimpleRouterPage'
-import TopPage from './components/pages/TopPage'
+import SuperSimpleRouterPage from './components/pages/SuperSimpleRouterPage'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <SuperSimpleRouterPage /> */}
-    <TopPage />
+    <SuperSimpleRouterPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
