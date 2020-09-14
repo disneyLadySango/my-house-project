@@ -33,23 +33,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const LoginPage: React.FC<IProps> = props => {
-  const [count, setCount] = useState(0)
   const [imageCount, setImageCount] = useState(0)
   const classes = useStyles();
   const loginCheck = () => {
-    if (count !== 5) {
+    if (imageCount < 5) {
       return
     }
-    if (imageCount !== 1) {
+    if (props.value.id !== process.env.REACT_APP_USER_ID) {
       return
     }
-    if (props.value.id !== '') {
+    if (props.value.password !== process.env.REACT_APP_PASSWORD) {
       return
     }
-    if (props.value.password !== 'わんたろう') {
-      return
-    }
-    if (props.value.watchword !== 'わんたろう') {
+    if (props.value.watchword !== process.env.REACT_APP_WATCHWORD) {
       return
     }
     props.login(true)
@@ -96,7 +92,7 @@ const LoginPage: React.FC<IProps> = props => {
             onChange={(e) => props.onChange(e.target.value, 'watchword')}
           />
           <Button
-            onClick={() => setCount(count + 1)}
+            onClick={loginCheck}
             fullWidth
             variant="contained"
             color="primary"
@@ -104,7 +100,7 @@ const LoginPage: React.FC<IProps> = props => {
           >
             Sign In
           </Button>
-          <Typography onClick={loginCheck} variant="body2" color="textSecondary" align="center">
+          <Typography variant="body2" color="textSecondary" align="center">
             ログイン方法については管理者にご確認ください
           </Typography>
         </FormContainer>
