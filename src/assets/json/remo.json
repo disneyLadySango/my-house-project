@@ -1,0 +1,210 @@
+[
+  {
+    "name": "リビング照明",
+    "image": "WbIncandescent",
+    "signals": [
+      {
+        "id": "814a0770-c4e2-430e-8388-ddabded0943b",
+        "name": "電源",
+        "image": "PowerSettingsNew"
+      },
+      {
+        "id": "e12f1a52-d9a8-4ed4-8e7d-8490b1e0f795",
+        "name": "おやすみタイマー",
+        "image": "Timer"
+      },
+      {
+        "id": "a15c339f-5a34-40d9-a117-ba6c84d02cc8",
+        "name": "光量アップ",
+        "image": "ico_on"
+      },
+      {
+        "id": "f0fb4e04-70b8-4d94-9037-de85e4282e75",
+        "name": "光量ダウン",
+        "image": "ArrowDropDownCircle"
+      },
+      {
+        "id": "fa238bcf-b239-49cb-a790-f962859eb78b",
+        "name": "常夜灯",
+        "image": "ico_on"
+      }
+    ]
+  },
+  {
+    "name": "スピーカー",
+    "image": "Speaker",
+    "signals": [
+      {
+        "id": "48947186-4d22-4b6f-96b3-2ce02b4800ea",
+        "name": "電源",
+        "image": "ico_io"
+      },
+      {
+        "id": "81b21200-d5ed-4eab-832c-940ccf613696",
+        "name": "音量を上げる",
+        "image": "ico_on"
+      },
+      {
+        "id": "077dbffe-2276-4b4a-8bb1-4d290d0abefb",
+        "name": "音量を下げる",
+        "image": "ico_on"
+      },
+      {
+        "id": "b6899bdb-2cf6-4863-a3a1-e1acc9d1734a",
+        "name": "ミュート",
+        "image": "ico_on"
+      },
+      {
+        "id": "d0402fa3-0b67-49ff-834c-a2b525e92ede",
+        "name": "HDMI",
+        "image": "ico_on"
+      },
+      {
+        "id": "95f3bac5-7c88-4156-b8b4-c89955d400c9",
+        "name": "TV",
+        "image": "ico_on"
+      },
+      {
+        "id": "9d93466b-fd26-4154-995f-59fb8f214417",
+        "name": "Bluetooth",
+        "image": "ico_on"
+      },
+      {
+        "id": "3d9dba3a-aefb-4c9d-b890-df4c41666dab",
+        "name": "NET",
+        "image": "ico_on"
+      },
+      {
+        "id": "08a11af3-f874-4456-b26e-68df7146dfbe",
+        "name": "クリアボイス",
+        "image": "ico_on"
+      },
+      {
+        "id": "2f352147-cc16-4cd3-9a6b-ee18f4ac090b",
+        "name": "3Dサラウンド",
+        "image": "ico_on"
+      },
+      {
+        "id": "8082a64d-7912-4bfb-8f55-c683e5fdb706",
+        "name": "ムービー",
+        "image": "ico_on"
+      },
+      {
+        "id": "c35a9612-91cb-44de-bc4d-6b84e0b641bb",
+        "name": "テレビ",
+        "image": "ico_on"
+      },
+      {
+        "id": "764c6c8e-0e0a-4c34-955b-47e18e3db891",
+        "name": "ミュージック",
+        "image": "ico_on"
+      },
+      {
+        "id": "9b6cc54e-c6c7-49c2-8d71-9d74b9364ce4",
+        "name": "スポーツ",
+        "image": "ico_on"
+      },
+      {
+        "id": "8b06415f-0574-4add-9b14-a3f2c609506a",
+        "name": "ゲーム",
+        "image": "ico_on"
+      },
+      {
+        "id": "f53cd7d3-663c-417a-9b81-993059bc2db5",
+        "name": "サブウーファーを上げる",
+        "image": "ico_on"
+      },
+      {
+        "id": "bc8bb107-f9f6-456e-a4ae-dcbb3533ff29",
+        "name": "サブウーファーを下げる",
+        "image": "ico_on"
+      },
+      {
+        "id": "7ab5cdeb-4035-466c-900d-2d1714faa10f",
+        "name": "ステレオ",
+        "image": "ico_on"
+      },
+      {
+        "id": "916ce441-6c78-45a3-be03-361114e858ff",
+        "name": "BASSEXT",
+        "image": "ico_on"
+      },
+      {
+        "id": "5b705b39-b445-4798-a623-9f26b0c09017",
+        "name": "INFO",
+        "image": "ico_on"
+      },
+      {
+        "id": "bb2e9f71-cb78-4a53-a40e-112dbc46827f",
+        "name": "アレクサ",
+        "image": "ico_on"
+      }
+    ]
+  },
+  {
+    "name": "プロジェクター",
+    "image": "MovieFilter",
+    "signals": [
+      {
+        "id": "a8f8a592-f669-4b6c-ae3f-f83982f67c77",
+        "name": "電源",
+        "image": "PowerSettingsNew"
+      },
+      {
+        "id": "1ded8b92-fe2a-49dd-8269-dfbd6c27493f",
+        "name": "音量を上げる",
+        "image": "ico_on"
+      },
+      {
+        "id": "2ae26760-8f47-4f12-bd56-4dc9bcff87c4",
+        "name": "音量を下げる",
+        "image": "ico_on"
+      },
+      {
+        "id": "3548587b-80c1-4337-8f77-cf0e2dc8a2bc",
+        "name": "ミュート",
+        "image": "ico_on"
+      },
+      {
+        "id": "80b4716c-d647-4fbc-8551-499dee473360",
+        "name": "入力切替",
+        "image": "ico_on"
+      },
+      {
+        "id": "8bb36822-9e14-4039-b4fc-9de797d0ae01",
+        "name": "設定",
+        "image": "ico_on"
+      },
+      {
+        "id": "05d39c68-7715-40ca-b097-9fadcc4beaec",
+        "name": "OK",
+        "image": "ico_on"
+      },
+      {
+        "id": "a1d2b77d-2df6-446c-8559-6df1f326821d",
+        "name": "リターン",
+        "image": "ico_on"
+      },
+      {
+        "id": "2118c592-13b4-44e7-b99b-21d5fa01b208",
+        "name": "上",
+        "image": "ico_on"
+      },
+      {
+        "id": "904baefe-fa50-4a58-b195-67c8f6c59436",
+        "name": "左",
+        "image": "ico_on"
+      },
+      {
+        "id": "b3a216f2-26fb-41e2-91d3-08d486e9f4a1",
+        "name": "右",
+        "image": "ico_on"
+      },
+      {
+        "id": "34e6df0c-0d87-4b76-bc81-132d328e6a1b",
+        "name": "下",
+        "image": "ico_on"
+      }
+    ]
+  }
+]
