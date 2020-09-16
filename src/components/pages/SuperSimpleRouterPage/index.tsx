@@ -3,7 +3,7 @@ import LoginPage from '../LoginPage'
 import TopPage from '../TopPage'
 
 const SuperSimpleRouterPage: React.FC = props => {
-  const [ isLogin, setLogin ] = useState(false)
+  const [ user, setUser ] = useState('')
   const [ value, setValue ] = useState({
     id: '', password: '', watchword: '',
   })
@@ -12,7 +12,7 @@ const SuperSimpleRouterPage: React.FC = props => {
     newValue[key] = changeValue
     setValue(newValue)
   }
-  return isLogin ? <TopPage /> : <LoginPage value={value} onChange={onChange} login={setLogin} /> 
+  return user === '' ? <LoginPage value={value} onChange={onChange} login={setUser} /> : <TopPage user={user} />
 }
 
 export default SuperSimpleRouterPage

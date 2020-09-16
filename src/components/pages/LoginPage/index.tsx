@@ -36,19 +36,22 @@ const LoginPage: React.FC<IProps> = props => {
   const [imageCount, setImageCount] = useState(0)
   const classes = useStyles();
   const loginCheck = () => {
-    if (imageCount < 5) {
-      return
+    // メインユーザ
+    if (
+      props.value.id === process.env.REACT_APP_USER_ID &&
+      props.value.password === process.env.REACT_APP_PASSWORD &&
+      props.value.watchword === process.env.REACT_APP_WATCHWORD
+    ) {
+      props.login('admin')
     }
-    if (props.value.id !== process.env.REACT_APP_USER_ID) {
-      return
+    // ゲストユーザ
+    if (
+      props.value.id === process.env.REACT_APP_GUEST_USER_ID &&
+      props.value.password === process.env.REACT_APP_GUEST_PASSWORD &&
+      props.value.watchword === process.env.REACT_APP_GUEST_WATCHWORD
+    ) {
+      props.login('guest')
     }
-    if (props.value.password !== process.env.REACT_APP_PASSWORD) {
-      return
-    }
-    if (props.value.watchword !== process.env.REACT_APP_WATCHWORD) {
-      return
-    }
-    props.login(true)
   }
   return (
     <Component>

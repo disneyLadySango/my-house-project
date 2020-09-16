@@ -1,11 +1,10 @@
 import axios from 'axios'
 import { sleep } from '../task'
 import { Send } from '../../const/api'
-import secret from '../../assets/json/secret.json'
 
 const NATURE_REMO_HEADERS = {
   accept: 'application/json',
-  Authorization: `Bearer ${secret.apikey}`
+  Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
 }
 
 // eslint-disable-next-line no-template-curly-in-string

@@ -10,6 +10,10 @@ import SettingsVoiceIcon from '@material-ui/icons/SettingsVoice';
 import RemoTemplate from '../../templates/RemoTemplate'
 import WifiTemplate from '../../templates/WifiTemplate'
 
+interface IProps {
+  user: string
+}
+
 const useStyles = makeStyles((theme) => ({
   icon: {
     width: '100%',
@@ -26,14 +30,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TopPage: React.FC = (props) => {
+const TopPage: React.FC<IProps> = (props) => {
   const style = useStyles()
-  const [ activeSection , setActiveSection ] = useState('remo')
+  const defState = props.user === 'admin' ? 'remo' : 'wifi'
+  const [ activeSection , setActiveSection ] = useState(defState)
+  const remoIconWrapProps = {
+    onClick: (props.user === 'admin') ? () => setActiveSection('remo') : () => null,
+  }
   return (
     <Main>
       <Navigation>
         <IconNavigation>
-          <IconWrapper onClick={() => setActiveSection('remo')} active={activeSection === 'remo'}>
+          <IconWrapper onClick={() => remoIconWrapProps.onClick()} active={activeSection === 'remo'}>
             <SettingsRemoteIcon className={activeSection === 'remo' ? style.iconActive : style.icon} fontSize={'large'} color={'action'} />
           </IconWrapper>
         </IconNavigation>
@@ -51,6 +59,7 @@ const TopPage: React.FC = (props) => {
       <DetailContainer>
         {activeSection === 'remo' && <RemoTemplate />}
         {activeSection === 'wifi' && <WifiTemplate />}
+        {activeSection === 'voice' && <h2>工事中</h2>}
       </DetailContainer>
     </Main>
   )
