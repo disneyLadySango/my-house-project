@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import SuperSimpleRouterPage from './components/pages/SuperSimpleRouterPage'
+import RemoconPage from './components/pages/RemoconPage'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <SuperSimpleRouterPage />
+    <RemoconPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
