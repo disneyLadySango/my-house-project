@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './public/index.css';
 import RemoconPage from './components/pages/RemoconPage'
 import * as serviceWorker from './serviceWorker';
 
