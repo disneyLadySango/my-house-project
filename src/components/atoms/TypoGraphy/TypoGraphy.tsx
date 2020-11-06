@@ -3,7 +3,7 @@ import { Component, Title, ContentTitle, ItemText, Label } from './Presenter'
 import { IProps } from './type'
 import { TypoGraphyEnum } from '.'
 
-const createChild = bold => {
+const createChild = (bold: TypoGraphyEnum) => {
   switch (bold) {
     case TypoGraphyEnum.TITLE:
       return Title

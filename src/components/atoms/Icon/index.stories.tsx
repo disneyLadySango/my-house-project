@@ -5,7 +5,7 @@ import Icon, { IconEnum } from '.';
 import { IProps } from './type'
 
 export const defaultProps: IProps = {
-  size: 24,
+  size: 64,
   image: IconEnum.AIRCON,
 }
 
