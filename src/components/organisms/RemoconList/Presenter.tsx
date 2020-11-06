@@ -4,16 +4,15 @@ import RemoconListItem from '../../molecules/RemoconListItem'
 import { RemoconItemProps, RemoconItemState } from './type'
 
 const StyledComponent = styled.ul`
-  padding: 10px 15px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0;
 `
 
 const StyledListComponent = styled.li<RemoconItemState>`
-  width: calc(( 100% -40px ) / 4 - 10px);
-  min-width: 100px;
+  display: inline-block;
+  min-width: 20%;
   padding: 10px 20px 30px;
   opacity: 0.5;
   cursor: pointer;

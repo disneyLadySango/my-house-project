@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { TypoGraphyProps } from './type'
 
-const StyledContainer = styled.p<TypoGraphyProps>`
+const StyledContainer = styled.div<TypoGraphyProps>`
   line-height: 1.35;
   margin: 0;
   ${props =>
