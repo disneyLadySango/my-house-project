@@ -1,6 +1,6 @@
 import { TypoGraphyEnum } from '.'
 
-interface IProps {
+export interface IProps {
   size: number
   text: string
   bold: TypoGraphyEnum

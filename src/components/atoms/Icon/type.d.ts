@@ -1,6 +1,6 @@
 import { IconEnum } from '.'
 
-interface IProps {
+export interface IProps {
   image: IconEnum
   size: number
 }

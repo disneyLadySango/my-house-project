@@ -4,6 +4,7 @@ import { TypoGraphyProps } from './type'
 
 const StyledContainer = styled.p<TypoGraphyProps>`
   line-height: 1.35;
+  margin: 0;
   ${props =>
     props.size &&
       css`
