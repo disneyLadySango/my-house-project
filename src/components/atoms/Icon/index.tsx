@@ -3,5 +3,6 @@ export enum IconEnum {
   PROJECTOR = 'projector',
   AIRCON = 'aircon',
   SPEACKER = 'speacker',
-  LIGHT = 'light'
+  LIGHT = 'light',
+  OTHER = 'light'
 }
