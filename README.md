@@ -7,3 +7,5 @@
 Github Pagesで公開しています。<br />
 React + TypeScriptで実装しています。<br />
 APIはNature Remoアプリを使っています、Getパラメータにアクセスに関する情報を付与すると実行できます。<br />
+<br />
+key=${NATURE_REMO_API_KEY}
