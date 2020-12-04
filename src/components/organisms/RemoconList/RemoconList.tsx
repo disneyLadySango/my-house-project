@@ -1,25 +1,68 @@
-import React, { useState } from 'react'
-import { RemoconItem, Component } from './Presenter'
-import { IProps } from './type'
+import React, { useMemo, useCallback } from 'react'
 
-const RemoconList: React.FC<IProps> = props => {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const itemClick = (index: number) => {
-    if (index === activeIndex) return
-    setActiveIndex(index)
-    props.onClick(index)
-  }
+import { IconEnum } from '../../atoms/Icon'
+import { TypoGraphyEnum } from '../../atoms/TypoGraphy'
+import RemoconListItem from '../../molecules/RemoconListItem'
+
+import * as Presenter from './Presenter'
+import * as Type from './type'
+
+const isName = (nickname: string, str: string) => nickname.indexOf(str) !== -1
+
+const setImage = (nickname: string): IconEnum => {
+  if (isName(nickname, '照明')) return IconEnum.LIGHT
+  if (isName(nickname, 'エアコン')) return IconEnum.AIRCON
+  if (isName(nickname, 'プロジェクタ')) return IconEnum.PROJECTOR
+  if (isName(nickname, 'スピーカー')) return IconEnum.SPEACKER
+  return IconEnum.OTHER
+}
+
+const createRemoconList = (data: Type.ApiFetchData) => {
+  return data.map((model) => {
+    const { nickname } = model
+    const image = setImage(nickname)
+    return {
+      icon: {
+        size: 36,
+        image,
+      },
+      typoGraphy: {
+        size: 12,
+        bold: TypoGraphyEnum.LABEL,
+        text: model.nickname
+      } 
+    }
+  })
+}
+
+const RemoconList: React.FC<Type.Props> = props => {
+  const { apiFetchData, activeIndex, onClick } = props
+
+  const remoconList = useMemo(
+    () => createRemoconList(apiFetchData)
+  , [apiFetchData])
+
+  const onRemoconItemClick = useCallback((index: number, isActive: boolean) => {
+    if (isActive) return
+    onClick(index)
+  }, [])
+
   return (
-    <Component>
-      {props.remoconList.map((remocon, index) => (
-        <RemoconItem 
-          key={`remocon_list_item_${index}`}
-          remoconListItem={remocon}
-          isActive={index === activeIndex}
-          onClick={() => itemClick(index)}
-        />
-      ))}
-    </Component>
+    <Presenter.RemoconList>
+      {remoconList.map((remocon, index) => {
+        const isActive = index === activeIndex
+
+        return (
+          <Presenter.RemoconListItem
+            key={`remocon_list_item_${index}`}
+            isActive={isActive}
+            onClick={() => onRemoconItemClick(index, isActive)}
+          >
+            <RemoconListItem {...remocon} />
+          </Presenter.RemoconListItem>
+        )
+      })}
+    </Presenter.RemoconList>
   )
 }
 

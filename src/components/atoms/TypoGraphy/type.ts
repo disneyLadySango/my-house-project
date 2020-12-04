@@ -1,11 +1,7 @@
 import { TypoGraphyEnum } from '.'
 
-export interface IProps {
+export type Props = {
   size: number
   text: string
   bold: TypoGraphyEnum
-}
-
-interface TypoGraphyProps {
-  size: number
 }

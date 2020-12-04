@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { sleep } from '../task'
-import { Send } from '../../const/api'
+import { SEND } from '../../const/api/url'
 
 const NATURE_REMO_HEADERS = {
   accept: 'application/json',
@@ -12,7 +12,7 @@ const REPLACE_URL = '${param}';
 
 export const SendRequest = async (signal: string) => {
   try {
-    const url = Send.replace(REPLACE_URL, signal)
+    const url = SEND.replace(REPLACE_URL, signal)
     await axios.post(url, {}, {
       headers: NATURE_REMO_HEADERS
     })

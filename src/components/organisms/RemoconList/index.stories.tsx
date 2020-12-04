@@ -1,13 +1,30 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react';
 
-import { defaultProps as ItemProps } from '../../molecules/RemoconListItem/index.stories'
-
 import RemoconList from '.'
-import { IProps } from './type'
+import * as NatureRemoProps from '../../../types/natureremo'
+import * as Type from './type'
 
-export const defaultProps: IProps = {
-  remoconList: [ ItemProps, ItemProps, ItemProps, ItemProps, ItemProps, ItemProps, ],
+export const defaultFetchData: NatureRemoProps.Appliance = {
+  aircon: null,
+  device: null,
+  id: 'sample',
+  image: "ico_light",
+  model: null,
+  nickname: "サンプル照明",
+  settings: null,
+  signals: null,
+  type: "IR",
+}
+export const defaultProps: Type.Props = {
+  apiFetchData: [ 
+    {...defaultFetchData, nickname: 'サンプル照明'},
+    {...defaultFetchData, nickname: 'サンプルエアコン'},
+    {...defaultFetchData, nickname: 'サンプルプロジェクタ'},
+    {...defaultFetchData, nickname: 'サンプルスピーカー'},
+    {...defaultFetchData, nickname: 'サンプルテスト'},
+  ],
+  activeIndex: 0,
   onClick: (index: number) => console.log(index)
 }
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TypoGraohy, { TypoGraphyEnum } from '.';
-import { IProps } from './type'
+import * as Type from './type'
 
-export const defaultProps: IProps = {
+export const defaultProps: Type.Props = {
   size: 14,
   text: 'Hello World',
   bold: TypoGraphyEnum.ITEM_TEXT,
