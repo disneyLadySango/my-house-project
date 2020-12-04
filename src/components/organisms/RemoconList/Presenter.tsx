@@ -1,16 +1,17 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import RemoconListItem from '../../molecules/RemoconListItem'
-import { RemoconItemProps, RemoconItemState } from './type'
 
-const StyledComponent = styled.ul`
+const StyledRemoconList = styled.ul`
   display: flex;
   overflow-x: auto;
   margin: 0;
   padding: 0;
 `
+export const RemoconList: React.FC = props => (
+  <StyledRemoconList>{props.children}</StyledRemoconList>
+)
 
-const StyledListComponent = styled.li<RemoconItemState>`
+const StyledListComponent = styled.li<{ isActive: boolean }>`
   display: inline-block;
   min-width: 20%;
   padding: 10px 20px 30px;
@@ -28,11 +29,12 @@ const StyledListComponent = styled.li<RemoconItemState>`
     `
   }
 `
-
-export const Component: React.FC = props => <StyledComponent>{props.children}</StyledComponent>
-
-export const RemoconItem: React.FC<RemoconItemProps> = props => (
+type RemoconListItem = {
+  isActive: boolean
+  onClick: () => void
+}
+export const RemoconListItem: React.FC<RemoconListItem> = props => (
   <StyledListComponent isActive={props.isActive} onClick={props.onClick}>
-    <RemoconListItem {...props.remoconListItem} />
+    {props.children}
   </StyledListComponent>
 )

@@ -1,7 +1,22 @@
 import React from 'react'
-import { Component } from './Presenter'
-import { IProps } from './type'
 
-const RemoconListItem: React.FC<IProps> = props => <Component {...props} />
+import Icon from '../../atoms/Icon'
+import TypoGraphy from '../../atoms/TypoGraphy'
+
+import * as Presenter from './Presenter'
+import * as Type from './type'
+
+const RemoconListItem: React.FC<Type.Props> = props => {
+  return (
+    <Presenter.RemoconListItem>
+      <Presenter.AtomsWrapper>
+        <Icon {...props.icon} />
+      </Presenter.AtomsWrapper>
+      <Presenter.AtomsWrapper>
+        <TypoGraphy {...props.typoGraphy} />
+      </Presenter.AtomsWrapper>
+    </Presenter.RemoconListItem>
+  )
+}
 
 export default RemoconListItem

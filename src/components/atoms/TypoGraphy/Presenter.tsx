@@ -1,7 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { TypoGraphyProps } from './type'
 
+type TypoGraphyProps = {
+  size: number
+}
 const StyledContainer = styled.div<TypoGraphyProps>`
   line-height: 1.35;
   margin: 0;
@@ -12,8 +14,7 @@ const StyledContainer = styled.div<TypoGraphyProps>`
       `
   }
 `
-
-export const Component: React.FC<TypoGraphyProps> = props => 
+export const TypoGraphy: React.FC<TypoGraphyProps> = props => 
   <StyledContainer size={props.size}>{props.children}</StyledContainer>
 
 export const Title: React.FC = props => <h2>{props.children}</h2>

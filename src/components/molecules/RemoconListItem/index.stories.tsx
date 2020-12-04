@@ -5,9 +5,9 @@ import { defaultProps as IconProps } from '../../atoms/Icon/index.stories'
 import { defaultProps as TypoGraphyProps } from '../../atoms/TypoGraphy/index.stories'
 
 import RemoconListItem from '.'
-import { IProps } from './type'
+import * as Type from './type'
 
-export const defaultProps: IProps = {
+export const defaultProps: Type.Props = {
   icon: IconProps,
   typoGraphy: TypoGraphyProps,
 }

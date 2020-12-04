@@ -1,28 +1,30 @@
 import React from 'react'
-import { Component, Title, ContentTitle, ItemText, Label } from './Presenter'
-import { IProps } from './type'
-import { TypoGraphyEnum } from '.'
 
-const createChild = (bold: TypoGraphyEnum) => {
-  switch (bold) {
+import { TypoGraphyEnum } from '.'
+import * as Presenter from './Presenter'
+import * as Type from './type'
+
+const Text: React.FC<{ bold: TypoGraphyEnum}> = (props) => {
+  switch (props.bold) {
     case TypoGraphyEnum.TITLE:
-      return Title
+      return <Presenter.Title>{props.children}</Presenter.Title>
     case TypoGraphyEnum.CONTENT_TITLE:
-      return ContentTitle
+      return <Presenter.ContentTitle>{props.children}</Presenter.ContentTitle>
     case TypoGraphyEnum.ITEM_TEXT:
-      return ItemText
+      return <Presenter.ItemText>{props.children}</Presenter.ItemText>
     case TypoGraphyEnum.LABEL:
     default:
-      return Label
+      return <Presenter.Label>{props.children}</Presenter.Label>
   }
 }
 
-const TypoGraphy: React.FC<IProps> = props => {
-  const ChildComponent = createChild(props.bold)
+const TypoGraphy: React.FC<Type.Props> = props => {
   return (
-    <Component size={props.size}>
-      <ChildComponent>{props.text}</ChildComponent>
-    </Component>
+    <Presenter.TypoGraphy size={props.size}>
+      <Text bold={props.bold}>
+        {props.text}
+      </Text>
+    </Presenter.TypoGraphy>
   )
 }
 
